@@ -10,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <header>
+        <h1>スケジュール管理アプリ</h1>
+      </header>
+      <%= yield %>
+      <footer>
+        <p>現在の時刻は<%= Time.zone.now.to_s(:datetime_jp) %>です。</p>
+      <footer>
+    </div>
   </body>
 </html>
